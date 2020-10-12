@@ -1,18 +1,62 @@
 //
-//  HWDataProtocol.swift
-//  DataProtocol
+//  FlexibleModelProtocol.swift
+//  FlexibleModelProtocol
 //
-//  Created by hanwe lee on 2020/09/16.
+//  Created by hanwe lee on 2020/10/12.
 //  Copyright © 2020 hanwe. All rights reserved.
 //  e-mail : mobiledev@kakao.com
 //
 
 import UIKit
 
-
 protocol FlexibleModelProtocol:Codable,Equatable {
-    func toJson() -> String
+    
     static func fromJson<T:FlexibleModelProtocol>(jsonData:Data?,object:T) -> T?
+    static func fromXML<T:FlexibleModelProtocol>(xmlData:Data?,object:T) -> T?
+    static func fromDictionary<T:FlexibleModelProtocol>(dictionary:Dictionary<String,Any>,object:T) -> T?
+    static func fromNSDictionary<T:FlexibleModelProtocol>(nsDictionary:NSDictionary,object:T) -> T?
+    
+    func toJson() -> String
+    func toXML() -> String
+    func toDictionary() -> Dictionary<String,Any>
+    func toNSDictionary() -> NSDictionary
+
+}
+
+extension FlexibleModelProtocol {
+    static func fromJson<T:FlexibleModelProtocol>(jsonData:Data?,object:T) -> T? {
+        var returnValue:T? = nil
+        let decoder = JSONDecoder()
+        if let data = jsonData, let result = try? decoder.decode(T.self, from: data) {
+            returnValue = result
+        }
+        return returnValue
+    }
+    
+    static func fromXML<T:FlexibleModelProtocol>(xmlData:Data?,object:T) -> T? { //아직 미구현
+        var returnValue:T? = nil
+        return returnValue
+    }
+    
+    static func fromDictionary<T:FlexibleModelProtocol>(dictionary:Dictionary<String,Any>,object:T) -> T? {
+        var returnValue:T? = nil
+        
+        if let jsonData = try? JSONSerialization.data(
+            withJSONObject: dictionary,
+            options: []) {
+            returnValue = T.fromJson(jsonData: jsonData, object: object)
+        }
+        
+        return returnValue
+    }
+    
+    static func fromNSDictionary<T:FlexibleModelProtocol>(nsDictionary:NSDictionary,object:T) -> T? {
+        var returnValue:T? = nil
+        if let dic = nsDictionary as? Dictionary<String,Any> {
+            returnValue = T.fromDictionary(dictionary: dic, object: object)
+        }
+        return returnValue
+    }
 }
 
 extension FlexibleModelProtocol {
@@ -29,12 +73,27 @@ extension FlexibleModelProtocol {
         return jsonString
     }
     
-    static func fromJson<T:FlexibleModelProtocol>(jsonData:Data?,object:T) -> T? {
-        var returnValue:T? = nil
-        let decoder = JSONDecoder()
-        if let data = jsonData, let result = try? decoder.decode(T.self, from: data) {
-            returnValue = result
+    func toXML() -> String { //아직 미구현
+        return ""
+    }
+    
+    func toDictionary() -> Dictionary<String,Any>? {
+        var returnValue:Dictionary<String,Any>? = nil
+        if let data = self.toJson().data(using: .utf8) {
+            do {
+                returnValue = try JSONSerialization.jsonObject(with:data, options: []) as? [String: Any]
+            }
+            catch {
+                
+            }
         }
         return returnValue
     }
+    
+    func toNSDictionary() -> NSDictionary? {
+        return self.toDictionary() as NSDictionary
+    }
+    
 }
+
+
