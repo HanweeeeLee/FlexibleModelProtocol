@@ -33,8 +33,18 @@ extension FlexibleModelProtocol {
         return returnValue
     }
     
-    static func fromXML<T:FlexibleModelProtocol>(xmlData:Data?,object:T) -> T? { //아직 미구현
+    static func fromXML<T:FlexibleModelProtocol>(xmlData:Data?,object:T) -> T? {
         var returnValue:T? = nil
+        
+        if let data = xmlData {
+            let parser:HWXMLParser = HWXMLParser()
+            if let xmlElement = parser.parse(data: data) {
+                if let dic = parser.toDictionary(element: xmlElement) {
+                    returnValue = fromDictionary(dictionary: dic, object: object)
+                }
+            }
+        }
+        
         return returnValue
     }
     
@@ -73,8 +83,10 @@ extension FlexibleModelProtocol {
         return jsonString
     }
     
-    func toXML() -> String { //아직 미구현
-        return ""
+    func toXML() -> String? {
+        let dic = toDictionary()
+        let parser:HWXMLParser = HWXMLParser()
+        return parser.toXMLString(dictionary: dic)
     }
     
     func toDictionary() -> Dictionary<String,Any>? {

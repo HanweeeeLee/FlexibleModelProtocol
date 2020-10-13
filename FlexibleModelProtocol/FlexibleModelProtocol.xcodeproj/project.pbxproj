@@ -11,6 +11,8 @@
 		78CE306E2534674E0020E536 /* FlexibleModelProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE306D2534674E0020E536 /* FlexibleModelProtocolTests.swift */; };
 		78CE30702534674E0020E536 /* FlexibleModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 78CE30622534674E0020E536 /* FlexibleModelProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78CE307C2534677E0020E536 /* FlexibleModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE307B2534677E0020E536 /* FlexibleModelProtocol.swift */; };
+		78D95D7D2535B0FB009A379F /* HWXMLEelement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D7B2535B0FB009A379F /* HWXMLEelement.swift */; };
+		78D95D7E2535B0FB009A379F /* HWXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D7C2535B0FB009A379F /* HWXMLParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 		78CE306D2534674E0020E536 /* FlexibleModelProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleModelProtocolTests.swift; sourceTree = "<group>"; };
 		78CE306F2534674E0020E536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78CE307B2534677E0020E536 /* FlexibleModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleModelProtocol.swift; sourceTree = "<group>"; };
+		78D95D7B2535B0FB009A379F /* HWXMLEelement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWXMLEelement.swift; sourceTree = "<group>"; };
+		78D95D7C2535B0FB009A379F /* HWXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWXMLParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 			children = (
 				78CE307B2534677E0020E536 /* FlexibleModelProtocol.swift */,
 				78CE30622534674E0020E536 /* FlexibleModelProtocol.h */,
+				78D95D7C2535B0FB009A379F /* HWXMLParser.swift */,
+				78D95D7B2535B0FB009A379F /* HWXMLEelement.swift */,
 				78CE30632534674E0020E536 /* Info.plist */,
 			);
 			path = FlexibleModelProtocol;
@@ -198,7 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D95D7E2535B0FB009A379F /* HWXMLParser.swift in Sources */,
 				78CE307C2534677E0020E536 /* FlexibleModelProtocol.swift in Sources */,
+				78D95D7D2535B0FB009A379F /* HWXMLEelement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
