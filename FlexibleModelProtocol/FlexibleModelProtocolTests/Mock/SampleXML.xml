@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <lostArticleBizInfo>
+        <list_total_count>234</list_total_count>
+        <result>
+            <code>INFO-000</code>
+            <message>Success</message>
+        </result>
+        <row>
+            <idx>580</idx>
+            <code>t1</code>
+            <location>new york</location>
+            <company>Coach</company>
+        </row>
+        <row>
+            <idx>520</idx>
+            <code>b2</code>
+            <location>san francisco</location>
+            <company>Facebook</company>
+        </row>
+        <row>
+            <idx>521</idx>
+            <code>b2</code>
+            <location>paris</location>
+            <company>Sandro</company>
+        </row>
+        <row>
+            <idx>588</idx>
+            <code>t1</code>
+            <location>seoul</location>
+            <company>Samsung</company>
+        </row>
+        <row>
+            <idx>589</idx>
+            <code>t1</code>
+            <location>cupertino</location>
+            <company>Apple</company>
+        </row>
+    </lostArticleBizInfo>
+    

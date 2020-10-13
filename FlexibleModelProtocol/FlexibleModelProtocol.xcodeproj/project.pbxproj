@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		78CE30692534674E0020E536 /* FlexibleModelProtocol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CE305F2534674E0020E536 /* FlexibleModelProtocol.framework */; };
-		78CE306E2534674E0020E536 /* FlexibleModelProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE306D2534674E0020E536 /* FlexibleModelProtocolTests.swift */; };
 		78CE30702534674E0020E536 /* FlexibleModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 78CE30622534674E0020E536 /* FlexibleModelProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78CE307C2534677E0020E536 /* FlexibleModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE307B2534677E0020E536 /* FlexibleModelProtocol.swift */; };
 		78D95D7D2535B0FB009A379F /* HWXMLEelement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D7B2535B0FB009A379F /* HWXMLEelement.swift */; };
 		78D95D7E2535B0FB009A379F /* HWXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D7C2535B0FB009A379F /* HWXMLParser.swift */; };
+		78D95D842535B5C9009A379F /* FromTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D832535B5C9009A379F /* FromTest.swift */; };
+		78D95D882535B5D4009A379F /* ToTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D872535B5D4009A379F /* ToTest.swift */; };
+		78D95D9F2535D7C2009A379F /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D9C2535D7C2009A379F /* TestModel.swift */; };
+		78D95DA02535D7C2009A379F /* SampleXML.xml in Resources */ = {isa = PBXBuildFile; fileRef = 78D95D9D2535D7C2009A379F /* SampleXML.xml */; };
+		78D95DA12535D7C2009A379F /* SampleJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 78D95D9E2535D7C2009A379F /* SampleJson.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,11 +34,15 @@
 		78CE30622534674E0020E536 /* FlexibleModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexibleModelProtocol.h; sourceTree = "<group>"; };
 		78CE30632534674E0020E536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78CE30682534674E0020E536 /* FlexibleModelProtocolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexibleModelProtocolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		78CE306D2534674E0020E536 /* FlexibleModelProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleModelProtocolTests.swift; sourceTree = "<group>"; };
 		78CE306F2534674E0020E536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78CE307B2534677E0020E536 /* FlexibleModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleModelProtocol.swift; sourceTree = "<group>"; };
 		78D95D7B2535B0FB009A379F /* HWXMLEelement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWXMLEelement.swift; sourceTree = "<group>"; };
 		78D95D7C2535B0FB009A379F /* HWXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWXMLParser.swift; sourceTree = "<group>"; };
+		78D95D832535B5C9009A379F /* FromTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromTest.swift; sourceTree = "<group>"; };
+		78D95D872535B5D4009A379F /* ToTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToTest.swift; sourceTree = "<group>"; };
+		78D95D9C2535D7C2009A379F /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		78D95D9D2535D7C2009A379F /* SampleXML.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SampleXML.xml; sourceTree = "<group>"; };
+		78D95D9E2535D7C2009A379F /* SampleJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleJson.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +97,22 @@
 		78CE306C2534674E0020E536 /* FlexibleModelProtocolTests */ = {
 			isa = PBXGroup;
 			children = (
-				78CE306D2534674E0020E536 /* FlexibleModelProtocolTests.swift */,
+				78D95D9B2535D7C2009A379F /* Mock */,
 				78CE306F2534674E0020E536 /* Info.plist */,
+				78D95D832535B5C9009A379F /* FromTest.swift */,
+				78D95D872535B5D4009A379F /* ToTest.swift */,
 			);
 			path = FlexibleModelProtocolTests;
+			sourceTree = "<group>";
+		};
+		78D95D9B2535D7C2009A379F /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				78D95D9C2535D7C2009A379F /* TestModel.swift */,
+				78D95D9D2535D7C2009A379F /* SampleXML.xml */,
+				78D95D9E2535D7C2009A379F /* SampleJson.json */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +214,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D95DA02535D7C2009A379F /* SampleXML.xml in Resources */,
+				78D95DA12535D7C2009A379F /* SampleJson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78CE306E2534674E0020E536 /* FlexibleModelProtocolTests.swift in Sources */,
+				78D95D9F2535D7C2009A379F /* TestModel.swift in Sources */,
+				78D95D882535B5D4009A379F /* ToTest.swift in Sources */,
+				78D95D842535B5C9009A379F /* FromTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

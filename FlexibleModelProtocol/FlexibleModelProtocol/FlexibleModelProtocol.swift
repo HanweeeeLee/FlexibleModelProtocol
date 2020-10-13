@@ -17,9 +17,9 @@ protocol FlexibleModelProtocol:Codable,Equatable {
     static func fromNSDictionary<T:FlexibleModelProtocol>(nsDictionary:NSDictionary,object:T) -> T?
     
     func toJson() -> String
-    func toXML() -> String
-    func toDictionary() -> Dictionary<String,Any>
-    func toNSDictionary() -> NSDictionary
+    func toXML() -> String?
+    func toDictionary() -> Dictionary<String,Any>?
+    func toNSDictionary() -> NSDictionary?
 
 }
 
@@ -84,9 +84,13 @@ extension FlexibleModelProtocol {
     }
     
     func toXML() -> String? {
-        let dic = toDictionary()
-        let parser:HWXMLParser = HWXMLParser()
-        return parser.toXMLString(dictionary: dic)
+        var returnValue:String? = nil
+        if let dic = toDictionary() {
+            let parser:HWXMLParser = HWXMLParser()
+            returnValue = parser.toXMLString(dictionary: dic)
+        }
+        
+        return returnValue
     }
     
     func toDictionary() -> Dictionary<String,Any>? {
@@ -103,7 +107,11 @@ extension FlexibleModelProtocol {
     }
     
     func toNSDictionary() -> NSDictionary? {
-        return self.toDictionary() as NSDictionary
+        var returnValue:NSDictionary? = nil
+        if let dic = self.toDictionary() {
+            returnValue = dic as NSDictionary
+        }
+        return returnValue
     }
     
 }

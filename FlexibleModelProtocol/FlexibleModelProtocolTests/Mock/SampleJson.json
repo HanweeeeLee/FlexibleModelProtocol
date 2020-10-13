@@ -1,0 +1,41 @@
+{
+  "lostArticleBizInfo": {
+    "list_total_count": "234",
+    "result": {
+      "code": "INFO-000",
+      "message": "Success"
+    },
+    "row": [
+      {
+        "idx": "580",
+        "code": "t1",
+        "location": "new york",
+        "company": "Coach"
+      },
+      {
+        "idx": "520",
+        "code": "b2",
+        "location": "san francisco",
+        "company": "Facebook"
+      },
+      {
+        "idx": "521",
+        "code": "b2",
+        "location": "paris",
+        "company": "Sandro"
+      },
+      {
+        "idx": "588",
+        "code": "t1",
+        "location": "seoul",
+        "company": "Samsung"
+      },
+      {
+        "idx": "589",
+        "code": "t1",
+        "location": "cupertino",
+        "company": "Apple"
+      }
+    ]
+  }
+}
