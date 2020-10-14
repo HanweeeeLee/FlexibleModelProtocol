@@ -56,22 +56,22 @@ struct MyModel: FlexibleModelProtocol {
 
 - JSON
 ```swift
-let jsonString:String = model.toJson()
+let jsonString:String = myModel.toJson()
 ```
 
 - XML
 ```swift
-let jsonString:String = model.toXML()
+let jsonString:String = myModel.toXML()
 ```
 
 - Dictionary
 ```swift
-let jsonString:String = model.toDictionary()
+let jsonString:String = myModel.toDictionary()
 ```
 
 - NSDictionary
 ```swift
-let jsonString:String = model.toNSDictionary()
+let jsonString:String = myModel.toNSDictionary()
 ```
 
 
