@@ -25,7 +25,7 @@ pod 'FlexibleModelProtocol', '~> 1.0'
 import FlexibleModelProtocol
 
 struct MyModel: FlexibleModelProtocol {
-    var lostArticleBizInfo:MySubModel = MySubModel()
+    ...
 }
 ```
 
