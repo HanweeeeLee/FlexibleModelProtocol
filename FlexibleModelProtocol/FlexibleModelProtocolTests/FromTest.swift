@@ -22,7 +22,7 @@ class FromTest: XCTestCase {
         if let path = Bundle(for: type(of: self)).path(forResource: "SampleJson", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                if let myModel:MyModel = MyModel.fromJson(jsonData: data, object: MyModel()) {
+                if let myModel: MyModel = MyModel.fromJson(jsonData: data, object: MyModel()) {
                     let mainModel = myModel.lostArticleBizInfo
                     XCTAssertNotEqual(mainModel.list_total_count, "")
                     XCTAssertNotEqual(mainModel.result.code, "")
@@ -45,7 +45,7 @@ class FromTest: XCTestCase {
         if let path = Bundle(for: type(of: self)).path(forResource: "SampleXML", ofType: "xml") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                if let myModel:MyModel = MyModel.fromXML(xmlData: data, object: MyModel()) {
+                if let myModel: MyModel = MyModel.fromXML(xmlData: data, object: MyModel()) {
                     let mainModel = myModel.lostArticleBizInfo
                     XCTAssertNotEqual(mainModel.list_total_count, "")
                     XCTAssertNotEqual(mainModel.result.code, "")

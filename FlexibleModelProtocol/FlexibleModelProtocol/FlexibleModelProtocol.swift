@@ -9,7 +9,7 @@
 
 import UIKit
 
-protocol FlexibleModelProtocol:Codable,Equatable {
+protocol FlexibleModelProtocol: Codable, Equatable {
     
     static func fromJson<T:FlexibleModelProtocol>(jsonData:Data?,object:T) -> T?
     static func fromXML<T:FlexibleModelProtocol>(xmlData:Data?,object:T) -> T?
@@ -24,8 +24,8 @@ protocol FlexibleModelProtocol:Codable,Equatable {
 }
 
 extension FlexibleModelProtocol {
-    static func fromJson<T:FlexibleModelProtocol>(jsonData:Data?,object:T) -> T? {
-        var returnValue:T? = nil
+    static func fromJson<T: FlexibleModelProtocol>(jsonData: Data?,object: T) -> T? {
+        var returnValue: T? = nil
         let decoder = JSONDecoder()
         if let data = jsonData, let result = try? decoder.decode(T.self, from: data) {
             returnValue = result
@@ -33,8 +33,8 @@ extension FlexibleModelProtocol {
         return returnValue
     }
     
-    static func fromXML<T:FlexibleModelProtocol>(xmlData:Data?,object:T) -> T? {
-        var returnValue:T? = nil
+    static func fromXML<T: FlexibleModelProtocol>(xmlData: Data?,object: T) -> T? {
+        var returnValue: T? = nil
         
         if let data = xmlData {
             let parser:HWXMLParser = HWXMLParser()
@@ -48,8 +48,8 @@ extension FlexibleModelProtocol {
         return returnValue
     }
     
-    static func fromDictionary<T:FlexibleModelProtocol>(dictionary:Dictionary<String,Any>,object:T) -> T? {
-        var returnValue:T? = nil
+    static func fromDictionary<T: FlexibleModelProtocol>(dictionary: Dictionary<String,Any>,object: T) -> T? {
+        var returnValue: T? = nil
         
         if let jsonData = try? JSONSerialization.data(
             withJSONObject: dictionary,
@@ -60,8 +60,8 @@ extension FlexibleModelProtocol {
         return returnValue
     }
     
-    static func fromNSDictionary<T:FlexibleModelProtocol>(nsDictionary:NSDictionary,object:T) -> T? {
-        var returnValue:T? = nil
+    static func fromNSDictionary<T: FlexibleModelProtocol>(nsDictionary: NSDictionary,object: T) -> T? {
+        var returnValue: T? = nil
         if let dic = nsDictionary as? Dictionary<String,Any> {
             returnValue = T.fromDictionary(dictionary: dic, object: object)
         }
@@ -71,7 +71,7 @@ extension FlexibleModelProtocol {
 
 extension FlexibleModelProtocol {
     func toJson() -> String {
-        var jsonString:String = ""
+        var jsonString: String = ""
         
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
@@ -84,7 +84,7 @@ extension FlexibleModelProtocol {
     }
     
     func toXML() -> String? {
-        var returnValue:String? = nil
+        var returnValue: String? = nil
         if let dic = toDictionary() {
             let parser:HWXMLParser = HWXMLParser()
             returnValue = parser.toXMLString(dictionary: dic)
@@ -94,7 +94,7 @@ extension FlexibleModelProtocol {
     }
     
     func toDictionary() -> Dictionary<String,Any>? {
-        var returnValue:Dictionary<String,Any>? = nil
+        var returnValue: Dictionary<String,Any>? = nil
         if let data = self.toJson().data(using: .utf8) {
             do {
                 returnValue = try JSONSerialization.jsonObject(with:data, options: []) as? [String: Any]
