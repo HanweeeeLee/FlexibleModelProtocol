@@ -37,59 +37,48 @@ class ToTest: XCTestCase {
     }
     
     func testToJson() {
+        XCTAssertNotNil(self.mockModel)
         guard let mock = self.mockModel else {
-            XCTAssertTrue(false)
             return
         }
         let jsonString:String = mock.toJson()
-        if jsonString == "" {
-            XCTAssertTrue(false)
-        }
-        else {
-            print("jsonString:\(jsonString)")
-            XCTAssertTrue(true)
-        }
+        XCTAssertNotEqual(jsonString, "")
+        print("jsonString:\(jsonString)")
     }
     
     func testToXml() {
+        XCTAssertNotNil(self.mockModel)
         guard let mock = self.mockModel else {
             XCTAssertTrue(false)
             return
         }
-        if let xmlString:String = mock.toXML() {
-            print("xmlString:\(xmlString)")
-            XCTAssertTrue(true)
-        }
-        else {
-            XCTAssertTrue(false)
-        }
+        let xmlString:String? = mock.toXML()
+        XCTAssertNotNil(xmlString)
+        XCTAssertNotEqual(xmlString, "")
+        print("xmlString:\(String(describing: xmlString))" )
     }
     
     func testToDictionary() {
+        XCTAssertNotNil(self.mockModel)
         guard let mock = self.mockModel else {
             XCTAssertTrue(false)
             return
         }
-        if let dic:[String:Any] = mock.toDictionary() {
-            print("dictionary:\(dic)")
-            XCTAssertTrue(true)
-        }
-        else {
-            XCTAssertTrue(false)
-        }
+        let dic:[String:Any]? = mock.toDictionary()
+        XCTAssertNotNil(dic)
+        XCTAssertGreaterThan(dic?.count ?? -1, 0)
+        print("dictionary:\(String(describing: dic))" )
     }
     
     func testToNSDictionary() {
+        XCTAssertNotNil(self.mockModel)
         guard let mock = self.mockModel else {
             XCTAssertTrue(false)
             return
         }
-        if let nsDic:NSDictionary = mock.toNSDictionary() {
-            print("NSDictionary:\(nsDic)")
-            XCTAssertTrue(true)
-        }
-        else {
-            XCTAssertTrue(false)
-        }
+        let nsDic:NSDictionary? = mock.toNSDictionary()
+        XCTAssertNotNil(nsDic)
+        XCTAssertGreaterThan(nsDic?.count ?? -1, 0)
+        print("NSDictionary:\(String(describing: nsDic))" )
     }
 }

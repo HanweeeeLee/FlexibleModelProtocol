@@ -24,19 +24,10 @@ class FromTest: XCTestCase {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 if let myModel:MyModel = MyModel.fromJson(jsonData: data, object: MyModel()) {
                     let mainModel = myModel.lostArticleBizInfo
-                    if mainModel.list_total_count == "" {
-                        XCTAssertTrue(false)
-                    }
-                    if mainModel.result.code == "" {
-                        XCTAssertTrue(false)
-                    }
-                    if mainModel.result.message == "" {
-                        XCTAssertTrue(false)
-                    }
-                    if mainModel.row.isEmpty {
-                        XCTAssertTrue(false)
-                    }
-                    XCTAssertTrue(true)
+                    XCTAssertNotEqual(mainModel.list_total_count, "")
+                    XCTAssertNotEqual(mainModel.result.code, "")
+                    XCTAssertNotEqual(mainModel.result.message, "")
+                    XCTAssertGreaterThan(mainModel.row.count, 0)
                 }
                 else {
                     XCTAssertTrue(false)
@@ -56,19 +47,10 @@ class FromTest: XCTestCase {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 if let myModel:MyModel = MyModel.fromXML(xmlData: data, object: MyModel()) {
                     let mainModel = myModel.lostArticleBizInfo
-                    if mainModel.list_total_count == "" {
-                        XCTAssertTrue(false)
-                    }
-                    if mainModel.result.code == "" {
-                        XCTAssertTrue(false)
-                    }
-                    if mainModel.result.message == "" {
-                        XCTAssertTrue(false)
-                    }
-                    if mainModel.row.isEmpty {
-                        XCTAssertTrue(false)
-                    }
-                    XCTAssertTrue(true)
+                    XCTAssertNotEqual(mainModel.list_total_count, "")
+                    XCTAssertNotEqual(mainModel.result.code, "")
+                    XCTAssertNotEqual(mainModel.result.message, "")
+                    XCTAssertGreaterThan(mainModel.row.count, 0)
                 }
                 else {
                     XCTAssertTrue(false)
