@@ -61,17 +61,17 @@ let jsonString:String = myModel.toJson()
 
 - XML
 ```swift
-let jsonString:String = myModel.toXML()
+let xmlString:String = myModel.toXML()
 ```
 
 - Dictionary
 ```swift
-let jsonString:String = myModel.toDictionary()
+let dictionary:[String:Any] = myModel.toDictionary()
 ```
 
 - NSDictionary
 ```swift
-let jsonString:String = myModel.toNSDictionary()
+let nsDictionary:NSDictionary = myModel.toNSDictionary()
 ```
 
 
