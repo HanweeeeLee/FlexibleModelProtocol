@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F589F2B25414FC1001443A3 /* FMPCopyOnWriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F589F2A25414FC1001443A3 /* FMPCopyOnWriteExtension.swift */; };
+		4F589F3325415712001443A3 /* CopyOnWriteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F589F3225415712001443A3 /* CopyOnWriteTest.swift */; };
 		78CE30692534674E0020E536 /* FlexibleModelProtocol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CE305F2534674E0020E536 /* FlexibleModelProtocol.framework */; };
 		78CE30702534674E0020E536 /* FlexibleModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 78CE30622534674E0020E536 /* FlexibleModelProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78CE307C2534677E0020E536 /* FlexibleModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE307B2534677E0020E536 /* FlexibleModelProtocol.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F589F2A25414FC1001443A3 /* FMPCopyOnWriteExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMPCopyOnWriteExtension.swift; sourceTree = "<group>"; };
+		4F589F3225415712001443A3 /* CopyOnWriteTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyOnWriteTest.swift; sourceTree = "<group>"; };
 		78CE305F2534674E0020E536 /* FlexibleModelProtocol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexibleModelProtocol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CE30622534674E0020E536 /* FlexibleModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexibleModelProtocol.h; sourceTree = "<group>"; };
 		78CE30632534674E0020E536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 				78CE30622534674E0020E536 /* FlexibleModelProtocol.h */,
 				78D95D7C2535B0FB009A379F /* HWXMLParser.swift */,
 				78D95D7B2535B0FB009A379F /* HWXMLEelement.swift */,
+				4F589F2A25414FC1001443A3 /* FMPCopyOnWriteExtension.swift */,
 				78CE30632534674E0020E536 /* Info.plist */,
 			);
 			path = FlexibleModelProtocol;
@@ -101,6 +106,7 @@
 				78CE306F2534674E0020E536 /* Info.plist */,
 				78D95D832535B5C9009A379F /* FromTest.swift */,
 				78D95D872535B5D4009A379F /* ToTest.swift */,
+				4F589F3225415712001443A3 /* CopyOnWriteTest.swift */,
 			);
 			path = FlexibleModelProtocolTests;
 			sourceTree = "<group>";
@@ -227,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78D95D7E2535B0FB009A379F /* HWXMLParser.swift in Sources */,
+				4F589F2B25414FC1001443A3 /* FMPCopyOnWriteExtension.swift in Sources */,
 				78CE307C2534677E0020E536 /* FlexibleModelProtocol.swift in Sources */,
 				78D95D7D2535B0FB009A379F /* HWXMLEelement.swift in Sources */,
 			);
@@ -239,6 +246,7 @@
 				78D95D9F2535D7C2009A379F /* TestModel.swift in Sources */,
 				78D95D882535B5D4009A379F /* ToTest.swift in Sources */,
 				78D95D842535B5C9009A379F /* FromTest.swift in Sources */,
+				4F589F3325415712001443A3 /* CopyOnWriteTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
