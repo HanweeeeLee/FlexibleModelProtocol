@@ -25,64 +25,6 @@ public protocol FlexibleModelProtocol: Codable, Equatable {
 
 }
 
-public protocol CopyOnWriteModelProtocol {
-    associatedtype MyType: FlexibleModelProtocol
-    var dataWrapper: DataWrapper<MyType> { get set }
-    var data:MyType { get set }
-}
-
-extension CopyOnWriteModelProtocol {
-    var data: MyType {
-        get {
-            return self.dataWrapper.data
-        }
-        set {
-            if !isKnownUniquelyReferenced(&self.dataWrapper) {
-                // dataWrapper에 대한 참조가 Uniquely하지 않으면 새로운 Wrapper를 생성하여 값을 대입해줍니다.
-                self.dataWrapper = DataWrapper(data: newValue)
-            } else {
-                // dataWrapper에 대한 참조가 Uniquely하다면 기존 Wrapper에 대해서 struct 값을 대입해줍니다.
-                self.dataWrapper.data = newValue
-            }
-        }
-    }
-}
-
-public class DataWrapper<T:FlexibleModelProtocol>:Equatable {
-    public static func == (lhs: DataWrapper<T>, rhs: DataWrapper<T>) -> Bool {
-        return lhs === rhs 
-    }
-    
-    var data: T
-
-    init(data: T) {
-      self.data = data
-    }
-}
-
-struct CopyOnWriteModel<T:FlexibleModelProtocol> {
-    // Data Wrapper
-    private var dataWrapper: DataWrapper<T>
-    init(data: T) {
-        self.dataWrapper = DataWrapper(data: data)
-    }
-    
-    var data: T {
-        get {
-            return self.dataWrapper.data
-        }
-        set {
-            if !isKnownUniquelyReferenced(&self.dataWrapper) {
-                // dataWrapper에 대한 참조가 Uniquely하지 않으면 새로운 Wrapper를 생성하여 값을 대입해줍니다.
-                self.dataWrapper = DataWrapper(data: newValue)
-            } else {
-                // dataWrapper에 대한 참조가 Uniquely하다면 기존 Wrapper에 대해서 struct 값을 대입해줍니다.
-                self.dataWrapper.data = newValue
-            }
-        }
-    }
-}
-
 extension FlexibleModelProtocol {
     public static func fromJson<T: FlexibleModelProtocol>(jsonData: Data?,object: T) -> T? {
         var returnValue: T? = nil
