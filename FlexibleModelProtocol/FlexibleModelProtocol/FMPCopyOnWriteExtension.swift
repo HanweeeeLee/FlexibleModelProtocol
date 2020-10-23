@@ -7,41 +7,27 @@
 
 public protocol CopyOnWriteModelProtocol {
     associatedtype ModelType: FlexibleModelProtocol
-    var dataWrapper: DataWrapper<ModelType> { get set }
-    var data:ModelType { get set }
-//    init(originModel:ModelType)
+    var dataWrapper: DataWrapper<ModelType>? { get set }
+    var data:ModelType? { get set }
 }
 
 extension CopyOnWriteModelProtocol {
     
-//    init(dataWrapper:DataWrapper<ModelType>) {
-//        self.init(dataWrapper: dataWrapper)
-//    }
-//    init() {
-//        self.init()
-//    }
+    func setDataWrapper() {
+        
+    }
     
-//    init(originModel:ModelType) {
-//
-//        self.init(originModel: originModel)
-//        self.dataWrapper = DataWrapper(data: originModel)
-//    }
-    
-    
-    
-//    convenience init(originModel:FlexibleModelProtocol) {
-//        self.dataWrapper = dataWrapper()
-//    }
-    
-    var data: ModelType {
+    var data: ModelType? {
         get {
-            return self.dataWrapper.data
+            return self.dataWrapper?.data
         }
         set {
             if !isKnownUniquelyReferenced(&self.dataWrapper) {
-                self.dataWrapper = DataWrapper(data: newValue)
+                if let value = newValue {
+                    self.dataWrapper = DataWrapper(originModel: value)
+                }
             } else {
-                self.dataWrapper.data = newValue
+                self.dataWrapper?.data = newValue
             }
         }
     }
@@ -52,9 +38,9 @@ public class DataWrapper<T:FlexibleModelProtocol>:Equatable {
         return lhs === rhs
     }
     
-    var data: T
-
-    init(data: T) {
-      self.data = data
+    var data: T?
+    
+    init(originModel: T) {
+        self.data = originModel
     }
 }

@@ -11,18 +11,17 @@ import UIKit
 
 public protocol FlexibleModelProtocol: Codable, Equatable {
     
-    static func fromJson<T:FlexibleModelProtocol>(jsonData:Data?,object:T) -> T?
-    static func fromXML<T:FlexibleModelProtocol>(xmlData:Data?,object:T) -> T?
-    static func fromDictionary<T:FlexibleModelProtocol>(dictionary:Dictionary<String,Any>,object:T) -> T?
-    static func fromNSDictionary<T:FlexibleModelProtocol>(nsDictionary:NSDictionary,object:T) -> T?
-    
-//    static func toCopyOnWriteModel<T:FlexibleModelProtocol>()
+    static func fromJson<T: FlexibleModelProtocol>(jsonData: Data?,object: T) -> T?
+    static func fromXML<T: FlexibleModelProtocol>(xmlData: Data?,object: T) -> T?
+    static func fromDictionary<T: FlexibleModelProtocol>(dictionary: Dictionary<String,Any>, object: T) -> T?
+    static func fromNSDictionary<T: FlexibleModelProtocol>(nsDictionary: NSDictionary, object: T) -> T?
     
     func toJson() -> String
     func toXML() -> String?
     func toDictionary() -> Dictionary<String,Any>?
     func toNSDictionary() -> NSDictionary?
-
+    
+    func toCopyOnWriteModel<T: CopyOnWriteModelProtocol>(object:inout T) -> T?
 }
 
 extension FlexibleModelProtocol {
@@ -116,6 +115,17 @@ extension FlexibleModelProtocol {
         return returnValue
     }
     
+}
+
+extension FlexibleModelProtocol {
+    func toCopyOnWriteModel<T: CopyOnWriteModelProtocol>(object:inout T) -> T? {
+        var returnValue:T? = nil
+        if let typeModel = self as? T.ModelType {
+            object.dataWrapper = DataWrapper(originModel: typeModel)
+            returnValue = object
+        }
+        return returnValue
+    }
 }
 
 
