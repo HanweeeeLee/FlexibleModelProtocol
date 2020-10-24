@@ -9,13 +9,11 @@ public protocol CopyOnWriteModelProtocol {
     associatedtype ModelType: FlexibleModelProtocol
     var dataWrapper: DataWrapper<ModelType>? { get set }
     var data:ModelType? { get set }
+    
+    func toFlexibleProtocolModel<T: FlexibleModelProtocol>() -> T?
 }
 
 extension CopyOnWriteModelProtocol {
-    
-    func setDataWrapper() {
-        
-    }
     
     var data: ModelType? {
         get {
@@ -30,6 +28,16 @@ extension CopyOnWriteModelProtocol {
                 self.dataWrapper?.data = newValue
             }
         }
+    }
+    
+    func toFlexibleProtocolModel<T: FlexibleModelProtocol>() -> T? {
+        var returnValue:T? = nil
+        if let data = self.data {
+            if let flexibleModelProtocolData = data as? T {
+                returnValue = flexibleModelProtocolData
+            }
+        }
+        return returnValue
     }
 }
 

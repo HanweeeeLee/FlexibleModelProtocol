@@ -47,4 +47,10 @@ class CopyOnWriteTest: XCTestCase {
             XCTAssertTrue(false)
         }
     }
+    
+    func testCoyOnWriteModelToFlexibleModel() {
+        let cowData:CowModel = CowModel(dataWrapper: DataWrapper(originModel: TestModel(name: "Any")))
+        let flexibleModel:TestModel? = cowData.toFlexibleProtocolModel()
+        XCTAssertNotNil(flexibleModel)
+    }
 }
