@@ -16,7 +16,7 @@ Model protocol with flexible, diverse types of conversion
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'FlexibleModelProtocol', '~> 1.0'
+pod 'FlexibleModelProtocol', '~> 1.1'
 ```
 ## Usage
 
@@ -86,16 +86,16 @@ struct MyModel: FlexibleModelProtocol {
 ```swift
 struct MyCopyOnWriteModel: CopyOnWriteModelProtocol {
     typealias ModelType = MyModel
-    var dataWrapper: DataWrapper<CopyOnWriteTest.MyModel>? = nil
+    var dataWrapper: DataWrapper<MyModel>? = nil
 }
 ```
 
 ### FlexibleModelProtocolModel to CopyOnWriteModelProtocolModel
 
 ```swift
-let model :MyModel = MyModel(...)
-var emptyCowObj :MyCopyOnWriteModel = MyCopyOnWriteModel()
-let cowData :MyCopyOnWriteModel? = model.toCopyOnWriteModel(object: &emptyCowObj)
+let model: MyModel = MyModel(...)
+var emptyCowObj: MyCopyOnWriteModel = MyCopyOnWriteModel()
+let cowData: MyCopyOnWriteModel? = model.toCopyOnWriteModel(object: &emptyCowObj)
 ```
 
 ### CopyOnWriteModelProtocolModel to FlexibleModelProtocolModel
