@@ -118,7 +118,7 @@ extension FlexibleModelProtocol {
 }
 
 extension FlexibleModelProtocol {
-    func toCopyOnWriteModel<T: CopyOnWriteModelProtocol>(object:inout T) -> T? {
+    public func toCopyOnWriteModel<T: CopyOnWriteModelProtocol>(object:inout T) -> T? {
         var returnValue:T? = nil
         if let typeModel = self as? T.ModelType {
             object.dataWrapper = DataWrapper(originModel: typeModel)

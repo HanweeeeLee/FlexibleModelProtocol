@@ -15,7 +15,7 @@ public protocol CopyOnWriteModelProtocol {
 
 extension CopyOnWriteModelProtocol {
     
-    var data: ModelType? {
+    public var data: ModelType? {
         get {
             return self.dataWrapper?.data
         }
@@ -30,7 +30,7 @@ extension CopyOnWriteModelProtocol {
         }
     }
     
-    func toFlexibleProtocolModel<T: FlexibleModelProtocol>() -> T? {
+    public func toFlexibleProtocolModel<T: FlexibleModelProtocol>() -> T? {
         var returnValue:T? = nil
         if let data = self.data {
             if let flexibleModelProtocolData = data as? T {
@@ -46,9 +46,9 @@ public class DataWrapper<T: FlexibleModelProtocol>: Equatable {
         return lhs === rhs
     }
     
-    var data: T?
+    public var data: T?
     
-    init(originModel: T) {
+    public init(originModel: T) {
         self.data = originModel
     }
 }

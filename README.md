@@ -74,6 +74,40 @@ let dictionary: [String:Any]? = myModel.toDictionary()
 let nsDictionary: NSDictionary? = myModel.toNSDictionary()
 ```
 
+### Copy on Write
+
+### example model 
+```swift
+struct MyModel: FlexibleModelProtocol {
+    ...
+}
+```
+
+```swift
+struct MyCopyOnWriteModel: CopyOnWriteModelProtocol {
+    typealias ModelType = MyModel
+    var dataWrapper: DataWrapper<CopyOnWriteTest.MyModel>? = nil
+}
+```
+
+### FlexibleModelProtocolModel to CopyOnWriteModelProtocolModel
+
+```swift
+let model :MyModel = MyModel(...)
+var emptyCowObj :MyCopyOnWriteModel = MyCopyOnWriteModel()
+let cowData :MyCopyOnWriteModel? = model.toCopyOnWriteModel(object: &emptyCowObj)
+```
+
+### CopyOnWriteModelProtocolModel to FlexibleModelProtocolModel
+
+```swift
+let cowModel: MyCopyOnWriteModel = CowModel(dataWrapper: DataWrapper(originModel: MyModel(...)))
+let flexibleModel: MyModel? = cowModel.toFlexibleProtocolModel()
+```
+
+
+
+
 
 ## License
 
