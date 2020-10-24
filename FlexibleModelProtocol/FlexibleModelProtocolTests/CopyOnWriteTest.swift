@@ -11,11 +11,11 @@ import XCTest
 
 class CopyOnWriteTest: XCTestCase {
     
-    struct TestModel:FlexibleModelProtocol {
-        var name:String = ""
+    struct TestModel: FlexibleModelProtocol {
+        var name: String = ""
     }
     
-    struct CowModel:CopyOnWriteModelProtocol {
+    struct CowModel: CopyOnWriteModelProtocol {
         typealias ModelType = TestModel
         var dataWrapper: DataWrapper<CopyOnWriteTest.TestModel>? = nil
     }
@@ -27,7 +27,7 @@ class CopyOnWriteTest: XCTestCase {
     }
     
     func testMakeCopyOnWriteObject() {
-        let cowData1:CowModel = CowModel(dataWrapper: DataWrapper(originModel: TestModel(name: "Any")))
+        let cowData1: CowModel = CowModel(dataWrapper: DataWrapper(originModel: TestModel(name: "Any")))
         var cowData2 = cowData1
         XCTAssertEqual(cowData1.dataWrapper, cowData2.dataWrapper)
         cowData2.data?.name = "newData"
@@ -50,7 +50,7 @@ class CopyOnWriteTest: XCTestCase {
     
     func testCoyOnWriteModelToFlexibleModel() {
         let cowData:CowModel = CowModel(dataWrapper: DataWrapper(originModel: TestModel(name: "Any")))
-        let flexibleModel:TestModel? = cowData.toFlexibleProtocolModel()
+        let flexibleModel: TestModel? = cowData.toFlexibleProtocolModel()
         XCTAssertNotNil(flexibleModel)
     }
 }

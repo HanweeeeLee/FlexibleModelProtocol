@@ -8,7 +8,7 @@
 public protocol CopyOnWriteModelProtocol {
     associatedtype ModelType: FlexibleModelProtocol
     var dataWrapper: DataWrapper<ModelType>? { get set }
-    var data:ModelType? { get set }
+    var data: ModelType? { get set }
     
     func toFlexibleProtocolModel<T: FlexibleModelProtocol>() -> T?
 }
@@ -41,7 +41,7 @@ extension CopyOnWriteModelProtocol {
     }
 }
 
-public class DataWrapper<T:FlexibleModelProtocol>:Equatable {
+public class DataWrapper<T: FlexibleModelProtocol>: Equatable {
     public static func == (lhs: DataWrapper<T>, rhs: DataWrapper<T>) -> Bool {
         return lhs === rhs
     }
