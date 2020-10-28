@@ -7,8 +7,6 @@
 //  e-mail : mobiledev@kakao.com
 //
 
-import UIKit
-
 public protocol FlexibleModelProtocol: Codable, Equatable {
     
     static func fromJson<T: FlexibleModelProtocol>(jsonData: Data?,object: T) -> T?

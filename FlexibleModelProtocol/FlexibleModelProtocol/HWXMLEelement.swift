@@ -5,8 +5,6 @@
 //  Created by hanwe lee on 2020/10/13.
 //
 
-import UIKit
-
 public class HWXMLEelement: NSObject {
     
     internal weak var parentsElement: HWXMLEelement?
