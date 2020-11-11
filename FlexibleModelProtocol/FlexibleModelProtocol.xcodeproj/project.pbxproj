@@ -9,6 +9,28 @@
 /* Begin PBXBuildFile section */
 		4F589F2B25414FC1001443A3 /* FMPCopyOnWriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F589F2A25414FC1001443A3 /* FMPCopyOnWriteExtension.swift */; };
 		4F589F3325415712001443A3 /* CopyOnWriteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F589F3225415712001443A3 /* CopyOnWriteTest.swift */; };
+		780255C9255C1085000FF125 /* FlexibleModelProtocol_watch.h in Headers */ = {isa = PBXBuildFile; fileRef = 780255C7255C1085000FF125 /* FlexibleModelProtocol_watch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		780255E1255C10CD000FF125 /* FlexibleModelProtocol_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780255D8255C10CC000FF125 /* FlexibleModelProtocol_tvOS.framework */; };
+		780255E6255C10CD000FF125 /* FlexibleModelProtocol_tvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780255E5255C10CD000FF125 /* FlexibleModelProtocol_tvOSTests.swift */; };
+		780255E8255C10CD000FF125 /* FlexibleModelProtocol_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 780255DA255C10CC000FF125 /* FlexibleModelProtocol_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78025607255C1103000FF125 /* FlexibleModelProtocol_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780255FE255C1103000FF125 /* FlexibleModelProtocol_macOS.framework */; };
+		7802560C255C1103000FF125 /* FlexibleModelProtocol_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802560B255C1103000FF125 /* FlexibleModelProtocol_macOSTests.swift */; };
+		7802560E255C1103000FF125 /* FlexibleModelProtocol_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 78025600255C1103000FF125 /* FlexibleModelProtocol_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7802561C255C111D000FF125 /* FlexibleModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE307B2534677E0020E536 /* FlexibleModelProtocol.swift */; };
+		78025624255C111F000FF125 /* FlexibleModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE307B2534677E0020E536 /* FlexibleModelProtocol.swift */; };
+		7802562C255C111F000FF125 /* FlexibleModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE307B2534677E0020E536 /* FlexibleModelProtocol.swift */; };
+		78025634255C112E000FF125 /* HWXMLEelement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D7B2535B0FB009A379F /* HWXMLEelement.swift */; };
+		78025635255C112E000FF125 /* HWXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D7C2535B0FB009A379F /* HWXMLParser.swift */; };
+		78025636255C112E000FF125 /* FMPCopyOnWriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F589F2A25414FC1001443A3 /* FMPCopyOnWriteExtension.swift */; };
+		78025637255C112E000FF125 /* FlexibleModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 78CE30622534674E0020E536 /* FlexibleModelProtocol.h */; };
+		78025638255C112F000FF125 /* HWXMLEelement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D7B2535B0FB009A379F /* HWXMLEelement.swift */; };
+		78025639255C112F000FF125 /* HWXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D7C2535B0FB009A379F /* HWXMLParser.swift */; };
+		7802563A255C112F000FF125 /* FMPCopyOnWriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F589F2A25414FC1001443A3 /* FMPCopyOnWriteExtension.swift */; };
+		7802563B255C112F000FF125 /* FlexibleModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 78CE30622534674E0020E536 /* FlexibleModelProtocol.h */; };
+		7802563C255C112F000FF125 /* HWXMLEelement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D7B2535B0FB009A379F /* HWXMLEelement.swift */; };
+		7802563D255C112F000FF125 /* HWXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D7C2535B0FB009A379F /* HWXMLParser.swift */; };
+		7802563E255C112F000FF125 /* FMPCopyOnWriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F589F2A25414FC1001443A3 /* FMPCopyOnWriteExtension.swift */; };
+		7802563F255C112F000FF125 /* FlexibleModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 78CE30622534674E0020E536 /* FlexibleModelProtocol.h */; };
 		78CE30692534674E0020E536 /* FlexibleModelProtocol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CE305F2534674E0020E536 /* FlexibleModelProtocol.framework */; };
 		78CE30702534674E0020E536 /* FlexibleModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 78CE30622534674E0020E536 /* FlexibleModelProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78CE307C2534677E0020E536 /* FlexibleModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE307B2534677E0020E536 /* FlexibleModelProtocol.swift */; };
@@ -22,6 +44,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		780255E2255C10CD000FF125 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78CE30562534674E0020E536 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 780255D7255C10CC000FF125;
+			remoteInfo = "FlexibleModelProtocol tvOS";
+		};
+		78025608255C1103000FF125 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78CE30562534674E0020E536 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 780255FD255C1103000FF125;
+			remoteInfo = "FlexibleModelProtocol macOS";
+		};
 		78CE306A2534674E0020E536 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78CE30562534674E0020E536 /* Project object */;
@@ -34,6 +70,21 @@
 /* Begin PBXFileReference section */
 		4F589F2A25414FC1001443A3 /* FMPCopyOnWriteExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMPCopyOnWriteExtension.swift; sourceTree = "<group>"; };
 		4F589F3225415712001443A3 /* CopyOnWriteTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyOnWriteTest.swift; sourceTree = "<group>"; };
+		780255C5255C1085000FF125 /* FlexibleModelProtocol_watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexibleModelProtocol_watch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		780255C7255C1085000FF125 /* FlexibleModelProtocol_watch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexibleModelProtocol_watch.h; sourceTree = "<group>"; };
+		780255C8255C1085000FF125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		780255D8255C10CC000FF125 /* FlexibleModelProtocol_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexibleModelProtocol_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		780255DA255C10CC000FF125 /* FlexibleModelProtocol_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexibleModelProtocol_tvOS.h; sourceTree = "<group>"; };
+		780255DB255C10CC000FF125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		780255E0255C10CD000FF125 /* FlexibleModelProtocol tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FlexibleModelProtocol tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		780255E5255C10CD000FF125 /* FlexibleModelProtocol_tvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleModelProtocol_tvOSTests.swift; sourceTree = "<group>"; };
+		780255E7255C10CD000FF125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		780255FE255C1103000FF125 /* FlexibleModelProtocol_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexibleModelProtocol_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78025600255C1103000FF125 /* FlexibleModelProtocol_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexibleModelProtocol_macOS.h; sourceTree = "<group>"; };
+		78025601255C1103000FF125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78025606255C1103000FF125 /* FlexibleModelProtocol macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FlexibleModelProtocol macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7802560B255C1103000FF125 /* FlexibleModelProtocol_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleModelProtocol_macOSTests.swift; sourceTree = "<group>"; };
+		7802560D255C1103000FF125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78CE305F2534674E0020E536 /* FlexibleModelProtocol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexibleModelProtocol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CE30622534674E0020E536 /* FlexibleModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexibleModelProtocol.h; sourceTree = "<group>"; };
 		78CE30632534674E0020E536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +101,43 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		780255C2255C1085000FF125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780255D5255C10CC000FF125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780255DD255C10CD000FF125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				780255E1255C10CD000FF125 /* FlexibleModelProtocol_tvOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780255FB255C1103000FF125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78025603255C1103000FF125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78025607255C1103000FF125 /* FlexibleModelProtocol_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78CE305C2534674E0020E536 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,11 +156,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		780255C6255C1085000FF125 /* FlexibleModelProtocol watch */ = {
+			isa = PBXGroup;
+			children = (
+				780255C7255C1085000FF125 /* FlexibleModelProtocol_watch.h */,
+				780255C8255C1085000FF125 /* Info.plist */,
+			);
+			path = "FlexibleModelProtocol watch";
+			sourceTree = "<group>";
+		};
+		780255D9255C10CC000FF125 /* FlexibleModelProtocol tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				780255DA255C10CC000FF125 /* FlexibleModelProtocol_tvOS.h */,
+				780255DB255C10CC000FF125 /* Info.plist */,
+			);
+			path = "FlexibleModelProtocol tvOS";
+			sourceTree = "<group>";
+		};
+		780255E4255C10CD000FF125 /* FlexibleModelProtocol tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				780255E5255C10CD000FF125 /* FlexibleModelProtocol_tvOSTests.swift */,
+				780255E7255C10CD000FF125 /* Info.plist */,
+			);
+			path = "FlexibleModelProtocol tvOSTests";
+			sourceTree = "<group>";
+		};
+		780255FF255C1103000FF125 /* FlexibleModelProtocol macOS */ = {
+			isa = PBXGroup;
+			children = (
+				78025600255C1103000FF125 /* FlexibleModelProtocol_macOS.h */,
+				78025601255C1103000FF125 /* Info.plist */,
+			);
+			path = "FlexibleModelProtocol macOS";
+			sourceTree = "<group>";
+		};
+		7802560A255C1103000FF125 /* FlexibleModelProtocol macOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				7802560B255C1103000FF125 /* FlexibleModelProtocol_macOSTests.swift */,
+				7802560D255C1103000FF125 /* Info.plist */,
+			);
+			path = "FlexibleModelProtocol macOSTests";
+			sourceTree = "<group>";
+		};
 		78CE30552534674E0020E536 = {
 			isa = PBXGroup;
 			children = (
 				78CE30612534674E0020E536 /* FlexibleModelProtocol */,
 				78CE306C2534674E0020E536 /* FlexibleModelProtocolTests */,
+				780255C6255C1085000FF125 /* FlexibleModelProtocol watch */,
+				780255D9255C10CC000FF125 /* FlexibleModelProtocol tvOS */,
+				780255E4255C10CD000FF125 /* FlexibleModelProtocol tvOSTests */,
+				780255FF255C1103000FF125 /* FlexibleModelProtocol macOS */,
+				7802560A255C1103000FF125 /* FlexibleModelProtocol macOSTests */,
 				78CE30602534674E0020E536 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +220,11 @@
 			children = (
 				78CE305F2534674E0020E536 /* FlexibleModelProtocol.framework */,
 				78CE30682534674E0020E536 /* FlexibleModelProtocolTests.xctest */,
+				780255C5255C1085000FF125 /* FlexibleModelProtocol_watch.framework */,
+				780255D8255C10CC000FF125 /* FlexibleModelProtocol_tvOS.framework */,
+				780255E0255C10CD000FF125 /* FlexibleModelProtocol tvOSTests.xctest */,
+				780255FE255C1103000FF125 /* FlexibleModelProtocol_macOS.framework */,
+				78025606255C1103000FF125 /* FlexibleModelProtocol macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +267,33 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		780255C0255C1085000FF125 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				780255C9255C1085000FF125 /* FlexibleModelProtocol_watch.h in Headers */,
+				78025637255C112E000FF125 /* FlexibleModelProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780255D3255C10CC000FF125 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				780255E8255C10CD000FF125 /* FlexibleModelProtocol_tvOS.h in Headers */,
+				7802563B255C112F000FF125 /* FlexibleModelProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780255F9255C1103000FF125 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7802560E255C1103000FF125 /* FlexibleModelProtocol_macOS.h in Headers */,
+				7802563F255C112F000FF125 /* FlexibleModelProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78CE305A2534674E0020E536 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,6 +305,96 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		780255C4255C1085000FF125 /* FlexibleModelProtocol watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 780255CA255C1085000FF125 /* Build configuration list for PBXNativeTarget "FlexibleModelProtocol watch" */;
+			buildPhases = (
+				780255C0255C1085000FF125 /* Headers */,
+				780255C1255C1085000FF125 /* Sources */,
+				780255C2255C1085000FF125 /* Frameworks */,
+				780255C3255C1085000FF125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FlexibleModelProtocol watch";
+			productName = "FlexibleModelProtocol watch";
+			productReference = 780255C5255C1085000FF125 /* FlexibleModelProtocol_watch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		780255D7255C10CC000FF125 /* FlexibleModelProtocol tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 780255E9255C10CD000FF125 /* Build configuration list for PBXNativeTarget "FlexibleModelProtocol tvOS" */;
+			buildPhases = (
+				780255D3255C10CC000FF125 /* Headers */,
+				780255D4255C10CC000FF125 /* Sources */,
+				780255D5255C10CC000FF125 /* Frameworks */,
+				780255D6255C10CC000FF125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FlexibleModelProtocol tvOS";
+			productName = "FlexibleModelProtocol tvOS";
+			productReference = 780255D8255C10CC000FF125 /* FlexibleModelProtocol_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		780255DF255C10CD000FF125 /* FlexibleModelProtocol tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 780255EC255C10CD000FF125 /* Build configuration list for PBXNativeTarget "FlexibleModelProtocol tvOSTests" */;
+			buildPhases = (
+				780255DC255C10CD000FF125 /* Sources */,
+				780255DD255C10CD000FF125 /* Frameworks */,
+				780255DE255C10CD000FF125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				780255E3255C10CD000FF125 /* PBXTargetDependency */,
+			);
+			name = "FlexibleModelProtocol tvOSTests";
+			productName = "FlexibleModelProtocol tvOSTests";
+			productReference = 780255E0255C10CD000FF125 /* FlexibleModelProtocol tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		780255FD255C1103000FF125 /* FlexibleModelProtocol macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7802560F255C1103000FF125 /* Build configuration list for PBXNativeTarget "FlexibleModelProtocol macOS" */;
+			buildPhases = (
+				780255F9255C1103000FF125 /* Headers */,
+				780255FA255C1103000FF125 /* Sources */,
+				780255FB255C1103000FF125 /* Frameworks */,
+				780255FC255C1103000FF125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FlexibleModelProtocol macOS";
+			productName = "FlexibleModelProtocol macOS";
+			productReference = 780255FE255C1103000FF125 /* FlexibleModelProtocol_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		78025605255C1103000FF125 /* FlexibleModelProtocol macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78025612255C1103000FF125 /* Build configuration list for PBXNativeTarget "FlexibleModelProtocol macOSTests" */;
+			buildPhases = (
+				78025602255C1103000FF125 /* Sources */,
+				78025603255C1103000FF125 /* Frameworks */,
+				78025604255C1103000FF125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78025609255C1103000FF125 /* PBXTargetDependency */,
+			);
+			name = "FlexibleModelProtocol macOSTests";
+			productName = "FlexibleModelProtocol macOSTests";
+			productReference = 78025606255C1103000FF125 /* FlexibleModelProtocol macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		78CE305E2534674E0020E536 /* FlexibleModelProtocol */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78CE30732534674E0020E536 /* Build configuration list for PBXNativeTarget "FlexibleModelProtocol" */;
@@ -177,9 +437,24 @@
 		78CE30562534674E0020E536 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					780255C4255C1085000FF125 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					780255D7255C10CC000FF125 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					780255DF255C10CD000FF125 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					780255FD255C1103000FF125 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					78025605255C1103000FF125 = {
+						CreatedOnToolsVersion = 12.1;
+					};
 					78CE305E2534674E0020E536 = {
 						CreatedOnToolsVersion = 12.0.1;
 						LastSwiftMigration = 1200;
@@ -204,11 +479,51 @@
 			targets = (
 				78CE305E2534674E0020E536 /* FlexibleModelProtocol */,
 				78CE30672534674E0020E536 /* FlexibleModelProtocolTests */,
+				780255C4255C1085000FF125 /* FlexibleModelProtocol watch */,
+				780255D7255C10CC000FF125 /* FlexibleModelProtocol tvOS */,
+				780255DF255C10CD000FF125 /* FlexibleModelProtocol tvOSTests */,
+				780255FD255C1103000FF125 /* FlexibleModelProtocol macOS */,
+				78025605255C1103000FF125 /* FlexibleModelProtocol macOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		780255C3255C1085000FF125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780255D6255C10CC000FF125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780255DE255C10CD000FF125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780255FC255C1103000FF125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78025604255C1103000FF125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78CE305D2534674E0020E536 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +543,55 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		780255C1255C1085000FF125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78025635255C112E000FF125 /* HWXMLParser.swift in Sources */,
+				7802561C255C111D000FF125 /* FlexibleModelProtocol.swift in Sources */,
+				78025634255C112E000FF125 /* HWXMLEelement.swift in Sources */,
+				78025636255C112E000FF125 /* FMPCopyOnWriteExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780255D4255C10CC000FF125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78025639255C112F000FF125 /* HWXMLParser.swift in Sources */,
+				78025624255C111F000FF125 /* FlexibleModelProtocol.swift in Sources */,
+				78025638255C112F000FF125 /* HWXMLEelement.swift in Sources */,
+				7802563A255C112F000FF125 /* FMPCopyOnWriteExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780255DC255C10CD000FF125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				780255E6255C10CD000FF125 /* FlexibleModelProtocol_tvOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780255FA255C1103000FF125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7802563D255C112F000FF125 /* HWXMLParser.swift in Sources */,
+				7802562C255C111F000FF125 /* FlexibleModelProtocol.swift in Sources */,
+				7802563C255C112F000FF125 /* HWXMLEelement.swift in Sources */,
+				7802563E255C112F000FF125 /* FMPCopyOnWriteExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78025602255C1103000FF125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7802560C255C1103000FF125 /* FlexibleModelProtocol_macOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78CE305B2534674E0020E536 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,6 +617,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		780255E3255C10CD000FF125 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 780255D7255C10CC000FF125 /* FlexibleModelProtocol tvOS */;
+			targetProxy = 780255E2255C10CD000FF125 /* PBXContainerItemProxy */;
+		};
+		78025609255C1103000FF125 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 780255FD255C1103000FF125 /* FlexibleModelProtocol macOS */;
+			targetProxy = 78025608255C1103000FF125 /* PBXContainerItemProxy */;
+		};
 		78CE306B2534674E0020E536 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 78CE305E2534674E0020E536 /* FlexibleModelProtocol */;
@@ -261,6 +635,260 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		780255CB255C1085000FF125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P4ZJYAK634;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "FlexibleModelProtocol watch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanwe.FlexibleModelProtocol-watch";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		780255CC255C1085000FF125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P4ZJYAK634;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "FlexibleModelProtocol watch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanwe.FlexibleModelProtocol-watch";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		780255EA255C10CD000FF125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P4ZJYAK634;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "FlexibleModelProtocol tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanwe.FlexibleModelProtocol-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Debug;
+		};
+		780255EB255C10CD000FF125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P4ZJYAK634;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "FlexibleModelProtocol tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanwe.FlexibleModelProtocol-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Release;
+		};
+		780255ED255C10CD000FF125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P4ZJYAK634;
+				INFOPLIST_FILE = "FlexibleModelProtocol tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanwe.FlexibleModelProtocol-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+			};
+			name = Debug;
+		};
+		780255EE255C10CD000FF125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P4ZJYAK634;
+				INFOPLIST_FILE = "FlexibleModelProtocol tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanwe.FlexibleModelProtocol-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+			};
+			name = Release;
+		};
+		78025610255C1103000FF125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 7;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P4ZJYAK634;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "FlexibleModelProtocol macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanwe.FlexibleModelProtocol-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		78025611255C1103000FF125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 7;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P4ZJYAK634;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "FlexibleModelProtocol macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanwe.FlexibleModelProtocol-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		78025613255C1103000FF125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P4ZJYAK634;
+				INFOPLIST_FILE = "FlexibleModelProtocol macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanwe.FlexibleModelProtocol-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		78025614255C1103000FF125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P4ZJYAK634;
+				INFOPLIST_FILE = "FlexibleModelProtocol macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanwe.FlexibleModelProtocol-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		78CE30712534674E0020E536 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -324,7 +952,7 @@
 				TVOS_DEPLOYMENT_TARGET = 11.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
@@ -385,7 +1013,7 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
@@ -394,7 +1022,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = P4ZJYAK634;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -407,7 +1035,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 1.1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hanwe.FlexibleModelProtocol;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -422,7 +1050,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = P4ZJYAK634;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -435,7 +1063,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 1.1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hanwe.FlexibleModelProtocol;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -485,6 +1113,51 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		780255CA255C1085000FF125 /* Build configuration list for PBXNativeTarget "FlexibleModelProtocol watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				780255CB255C1085000FF125 /* Debug */,
+				780255CC255C1085000FF125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		780255E9255C10CD000FF125 /* Build configuration list for PBXNativeTarget "FlexibleModelProtocol tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				780255EA255C10CD000FF125 /* Debug */,
+				780255EB255C10CD000FF125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		780255EC255C10CD000FF125 /* Build configuration list for PBXNativeTarget "FlexibleModelProtocol tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				780255ED255C10CD000FF125 /* Debug */,
+				780255EE255C10CD000FF125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7802560F255C1103000FF125 /* Build configuration list for PBXNativeTarget "FlexibleModelProtocol macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78025610255C1103000FF125 /* Debug */,
+				78025611255C1103000FF125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78025612255C1103000FF125 /* Build configuration list for PBXNativeTarget "FlexibleModelProtocol macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78025613255C1103000FF125 /* Debug */,
+				78025614255C1103000FF125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		78CE30592534674E0020E536 /* Build configuration list for PBXProject "FlexibleModelProtocol" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
