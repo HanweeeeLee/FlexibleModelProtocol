@@ -4,6 +4,9 @@
 
 Model protocol with flexible, diverse types of conversion
 
+[![Platform](https://img.shields.io/cocoapods/p/FlexibleModelProtocol.svg?style=flat)](https://github.com/HanweeeeLee/FlexibleModelProtocol)
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/FlexibleModelProtocol.svg)](https://cocoapods.org/pods/FlexibleModelProtocol)
+
 
 ## Requirements
 
