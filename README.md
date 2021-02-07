@@ -117,4 +117,4 @@ Email : mobiledev@kakao.com
 
 ## License
 
-FlexibleModelProtocol is released under the MIT license. See LICENSE for details.
+FlexibleModelProtocol is released under the MIT license. [See LICENSE](https://github.com/HanweeeeLee/FlexibleModelProtocol/blob/main/LICENSE) for details.
