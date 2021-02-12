@@ -110,7 +110,8 @@ let cowModel: MyCopyOnWriteModel = CowModel(dataWrapper: DataWrapper(originModel
 let flexibleModel: MyModel? = cowModel.toFlexibleProtocolModel()
 ```
 
-
+## * Sample Project *
+### I wrote an example of how to use it for the unit test.
 
 ## Contact Us
 Email : mobiledev@kakao.com
