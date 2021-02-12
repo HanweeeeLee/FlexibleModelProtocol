@@ -41,6 +41,30 @@ class FromTest: XCTestCase {
         }
     }
     
+    func testFromJson2() {
+        if let path = Bundle(for: type(of: self)).path(forResource: "SampleJson2", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                if let myModel: MyRowModel2 = MyRowModel2.fromJson(jsonData: data, object: MyRowModel2(location: "New Your", company: "Coach")) {
+                    XCTAssertNotEqual(myModel.code, "")
+                    XCTAssertNotEqual(myModel.company, "")
+                    XCTAssertNotEqual(myModel.idx, "")
+                    XCTAssertNotEqual(myModel.location, "")
+                    XCTAssertNotEqual(myModel.location, "New Your")
+                    XCTAssertNotEqual(myModel.company, "Coach")
+                }
+                else {
+                    XCTAssertTrue(false)
+                }
+            } catch {
+                XCTAssertTrue(false)
+            }
+        }
+        else {
+            XCTAssertTrue(false)
+        }
+    }
+    
     func testFromXml() {
         if let path = Bundle(for: type(of: self)).path(forResource: "SampleXML", ofType: "xml") {
             do {

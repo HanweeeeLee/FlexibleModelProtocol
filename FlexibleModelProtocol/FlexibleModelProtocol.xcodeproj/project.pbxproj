@@ -31,6 +31,7 @@
 		7802563D255C112F000FF125 /* HWXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D95D7C2535B0FB009A379F /* HWXMLParser.swift */; };
 		7802563E255C112F000FF125 /* FMPCopyOnWriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F589F2A25414FC1001443A3 /* FMPCopyOnWriteExtension.swift */; };
 		7802563F255C112F000FF125 /* FlexibleModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 78CE30622534674E0020E536 /* FlexibleModelProtocol.h */; };
+		783FB9D525D6A54200495A6F /* SampleJson2.json in Resources */ = {isa = PBXBuildFile; fileRef = 783FB9D425D6A54200495A6F /* SampleJson2.json */; };
 		78CE30692534674E0020E536 /* FlexibleModelProtocol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CE305F2534674E0020E536 /* FlexibleModelProtocol.framework */; };
 		78CE30702534674E0020E536 /* FlexibleModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 78CE30622534674E0020E536 /* FlexibleModelProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78CE307C2534677E0020E536 /* FlexibleModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE307B2534677E0020E536 /* FlexibleModelProtocol.swift */; };
@@ -85,6 +86,7 @@
 		78025606255C1103000FF125 /* FlexibleModelProtocol macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FlexibleModelProtocol macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7802560B255C1103000FF125 /* FlexibleModelProtocol_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleModelProtocol_macOSTests.swift; sourceTree = "<group>"; };
 		7802560D255C1103000FF125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		783FB9D425D6A54200495A6F /* SampleJson2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleJson2.json; sourceTree = "<group>"; };
 		78CE305F2534674E0020E536 /* FlexibleModelProtocol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexibleModelProtocol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CE30622534674E0020E536 /* FlexibleModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexibleModelProtocol.h; sourceTree = "<group>"; };
 		78CE30632534674E0020E536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				78D95D9C2535D7C2009A379F /* TestModel.swift */,
 				78D95D9D2535D7C2009A379F /* SampleXML.xml */,
 				78D95D9E2535D7C2009A379F /* SampleJson.json */,
+				783FB9D425D6A54200495A6F /* SampleJson2.json */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				783FB9D525D6A54200495A6F /* SampleJson2.json in Resources */,
 				78D95DA02535D7C2009A379F /* SampleXML.xml in Resources */,
 				78D95DA12535D7C2009A379F /* SampleJson.json in Resources */,
 			);
