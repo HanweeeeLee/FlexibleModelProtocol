@@ -9,21 +9,21 @@
 
 public protocol FlexibleModelProtocol: Codable, Equatable {
     
-    static func fromJson<T: FlexibleModelProtocol>(jsonData: Data?,object: T) -> T?
-    static func fromXML<T: FlexibleModelProtocol>(xmlData: Data?,object: T) -> T?
-    static func fromDictionary<T: FlexibleModelProtocol>(dictionary: Dictionary<String,Any>, object: T) -> T?
+    static func fromJson<T: FlexibleModelProtocol>(jsonData: Data?, object: T) -> T?
+    static func fromXML<T: FlexibleModelProtocol>(xmlData: Data?, object: T) -> T?
+    static func fromDictionary<T: FlexibleModelProtocol>(dictionary: Dictionary<String, Any>, object: T) -> T?
     static func fromNSDictionary<T: FlexibleModelProtocol>(nsDictionary: NSDictionary, object: T) -> T?
     
     func toJson() -> String
     func toXML() -> String?
-    func toDictionary() -> Dictionary<String,Any>?
+    func toDictionary() -> Dictionary<String, Any>?
     func toNSDictionary() -> NSDictionary?
     
-    func toCopyOnWriteModel<T: CopyOnWriteModelProtocol>(object:inout T) -> T?
+    func toCopyOnWriteModel<T: CopyOnWriteModelProtocol>(object: inout T) -> T?
 }
 
 extension FlexibleModelProtocol {
-    public static func fromJson<T: FlexibleModelProtocol>(jsonData: Data?,object: T) -> T? {
+    public static func fromJson<T: FlexibleModelProtocol>(jsonData: Data?, object: T) -> T? {
         var returnValue: T? = nil
         let decoder = JSONDecoder()
         if let data = jsonData, let result = try? decoder.decode(T.self, from: data) {
@@ -32,11 +32,11 @@ extension FlexibleModelProtocol {
         return returnValue
     }
     
-    public static func fromXML<T: FlexibleModelProtocol>(xmlData: Data?,object: T) -> T? {
+    public static func fromXML<T: FlexibleModelProtocol>(xmlData: Data?, object: T) -> T? {
         var returnValue: T? = nil
         
         if let data = xmlData {
-            let parser:HWXMLParser = HWXMLParser()
+            let parser: HWXMLParser = HWXMLParser()
             if let xmlElement = parser.parse(data: data) {
                 if let dic = parser.toDictionary(element: xmlElement) {
                     returnValue = fromDictionary(dictionary: dic, object: object)
@@ -47,7 +47,7 @@ extension FlexibleModelProtocol {
         return returnValue
     }
     
-    public static func fromDictionary<T: FlexibleModelProtocol>(dictionary: Dictionary<String,Any>,object: T) -> T? {
+    public static func fromDictionary<T: FlexibleModelProtocol>(dictionary: Dictionary<String, Any>, object: T) -> T? {
         var returnValue: T? = nil
         
         if let jsonData = try? JSONSerialization.data(
@@ -59,9 +59,9 @@ extension FlexibleModelProtocol {
         return returnValue
     }
     
-    public static func fromNSDictionary<T: FlexibleModelProtocol>(nsDictionary: NSDictionary,object: T) -> T? {
+    public static func fromNSDictionary<T: FlexibleModelProtocol>(nsDictionary: NSDictionary, object: T) -> T? {
         var returnValue: T? = nil
-        if let dic = nsDictionary as? Dictionary<String,Any> {
+        if let dic = nsDictionary as? Dictionary<String, Any> {
             returnValue = T.fromDictionary(dictionary: dic, object: object)
         }
         return returnValue
@@ -92,8 +92,8 @@ extension FlexibleModelProtocol {
         return returnValue
     }
     
-    public func toDictionary() -> Dictionary<String,Any>? {
-        var returnValue: Dictionary<String,Any>? = nil
+    public func toDictionary() -> Dictionary<String, Any>? {
+        var returnValue: Dictionary<String, Any>? = nil
         if let data = self.toJson().data(using: .utf8) {
             do {
                 returnValue = try JSONSerialization.jsonObject(with:data, options: []) as? [String: Any]
@@ -116,7 +116,7 @@ extension FlexibleModelProtocol {
 }
 
 extension FlexibleModelProtocol {
-    public func toCopyOnWriteModel<T: CopyOnWriteModelProtocol>(object:inout T) -> T? {
+    public func toCopyOnWriteModel<T: CopyOnWriteModelProtocol>(object: inout T) -> T? {
         var returnValue:T? = nil
         if let typeModel = self as? T.ModelType {
             object.dataWrapper = DataWrapper(originModel: typeModel)

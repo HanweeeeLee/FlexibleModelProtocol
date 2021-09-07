@@ -31,7 +31,7 @@ extension CopyOnWriteModelProtocol {
     }
     
     public func toFlexibleProtocolModel<T: FlexibleModelProtocol>() -> T? {
-        var returnValue:T? = nil
+        var returnValue: T? = nil
         if let data = self.data {
             if let flexibleModelProtocolData = data as? T {
                 returnValue = flexibleModelProtocolData
