@@ -9,7 +9,7 @@ import Foundation
 
 
 struct MyModel: FlexibleModelProtocol {
-    var lostArticleBizInfo:MySubModel = MySubModel()
+    var lostArticleBizInfo: MySubModel = MySubModel()
 }
 struct MySubModel: FlexibleModelProtocol {
     var list_total_count: String = ""
@@ -29,4 +29,18 @@ struct MyRowModel: FlexibleModelProtocol {
     var company: String = ""
 }
 
+
+struct MyRowModel2: FlexibleModelProtocol {
+    var idx: String
+    var code: String
+    var location: String
+    var company: String
+    
+    init(location: String, company: String) {
+        self.idx = ""
+        self.code = ""
+        self.location = location
+        self.company = company
+    }
+}
 

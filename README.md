@@ -4,6 +4,9 @@
 
 Model protocol with flexible, diverse types of conversion
 
+[![Platform](https://img.shields.io/cocoapods/p/FlexibleModelProtocol.svg?style=flat)](https://github.com/HanweeeeLee/FlexibleModelProtocol)
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/FlexibleModelProtocol.svg)](https://cocoapods.org/pods/FlexibleModelProtocol)
+
 
 ## Requirements
 
@@ -107,11 +110,12 @@ let cowModel: MyCopyOnWriteModel = CowModel(dataWrapper: DataWrapper(originModel
 let flexibleModel: MyModel? = cowModel.toFlexibleProtocolModel()
 ```
 
-
+## * Sample Project *
+### I wrote an example of how to use it for the unit test.
 
 ## Contact Us
 Email : mobiledev@kakao.com
 
 ## License
 
-FlexibleModelProtocol is released under the MIT license. See LICENSE for details.
+FlexibleModelProtocol is released under the MIT license. [See LICENSE](https://github.com/HanweeeeLee/FlexibleModelProtocol/blob/main/LICENSE) for details.

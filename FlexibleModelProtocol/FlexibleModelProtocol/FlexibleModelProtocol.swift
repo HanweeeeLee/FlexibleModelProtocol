@@ -96,7 +96,7 @@ extension FlexibleModelProtocol {
         var returnValue: Dictionary<String, Any>? = nil
         if let data = self.toJson().data(using: .utf8) {
             do {
-                returnValue = try JSONSerialization.jsonObject(with:data, options: []) as? [String: Any]
+                returnValue = try JSONSerialization.jsonObject(with:data, options: []) as? [String : Any]
             }
             catch {
                 
@@ -106,7 +106,7 @@ extension FlexibleModelProtocol {
     }
     
     public func toNSDictionary() -> NSDictionary? {
-        var returnValue:NSDictionary? = nil
+        var returnValue: NSDictionary? = nil
         if let dic = self.toDictionary() {
             returnValue = dic as NSDictionary
         }

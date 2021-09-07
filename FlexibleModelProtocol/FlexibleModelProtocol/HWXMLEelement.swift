@@ -18,7 +18,7 @@ public class HWXMLEelement: NSObject {
     }
     
     public convenience init(name: String, parentsElement: HWXMLEelement) {
-        self.init(name:name)
+        self.init(name: name)
         self.parentsElement = parentsElement
     }
     
