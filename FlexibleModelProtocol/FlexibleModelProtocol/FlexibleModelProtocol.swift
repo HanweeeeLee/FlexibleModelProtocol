@@ -9,10 +9,12 @@
 
 public protocol FlexibleModelProtocol: Codable, Equatable {
     
-    static func fromJson<T: FlexibleModelProtocol>(jsonData: Data?, object: T) -> T?
-    static func fromXML<T: FlexibleModelProtocol>(xmlData: Data?, object: T) -> T?
-    static func fromDictionary<T: FlexibleModelProtocol>(dictionary: Dictionary<String, Any>, object: T) -> T?
-    static func fromNSDictionary<T: FlexibleModelProtocol>(nsDictionary: NSDictionary, object: T) -> T?
+    associatedtype selfType: FlexibleModelProtocol
+    
+    static func fromJson(jsonData: Data?) -> selfType?
+    static func fromXML(xmlData: Data?) -> selfType?
+    static func fromDictionary(dictionary: Dictionary<String, Any>) -> selfType?
+    static func fromNSDictionary(nsDictionary: NSDictionary) -> selfType?
     
     func toJson() -> String
     func toXML() -> String?
@@ -23,23 +25,23 @@ public protocol FlexibleModelProtocol: Codable, Equatable {
 }
 
 extension FlexibleModelProtocol {
-    public static func fromJson<T: FlexibleModelProtocol>(jsonData: Data?, object: T) -> T? {
-        var returnValue: T? = nil
+    public static func fromJson(jsonData: Data?) -> selfType? {
+        var returnValue: selfType? = nil
         let decoder = JSONDecoder()
-        if let data = jsonData, let result = try? decoder.decode(T.self, from: data) {
+        if let data = jsonData, let result = try? decoder.decode(selfType.self, from: data) {
             returnValue = result
         }
         return returnValue
     }
     
-    public static func fromXML<T: FlexibleModelProtocol>(xmlData: Data?, object: T) -> T? {
-        var returnValue: T? = nil
+    public static func fromXML(xmlData: Data?) -> selfType? {
+        var returnValue: selfType? = nil
         
         if let data = xmlData {
             let parser: HWXMLParser = HWXMLParser()
             if let xmlElement = parser.parse(data: data) {
                 if let dic = parser.toDictionary(element: xmlElement) {
-                    returnValue = fromDictionary(dictionary: dic, object: object)
+                    returnValue = fromDictionary(dictionary: dic)
                 }
             }
         }
@@ -47,22 +49,22 @@ extension FlexibleModelProtocol {
         return returnValue
     }
     
-    public static func fromDictionary<T: FlexibleModelProtocol>(dictionary: Dictionary<String, Any>, object: T) -> T? {
-        var returnValue: T? = nil
+    public static func fromDictionary(dictionary: Dictionary<String, Any>) -> selfType? {
+        var returnValue: selfType? = nil
         
         if let jsonData = try? JSONSerialization.data(
             withJSONObject: dictionary,
             options: []) {
-            returnValue = T.fromJson(jsonData: jsonData, object: object)
+            returnValue = selfType.fromJson(jsonData: jsonData) as? Self.selfType
         }
         
         return returnValue
     }
     
-    public static func fromNSDictionary<T: FlexibleModelProtocol>(nsDictionary: NSDictionary, object: T) -> T? {
-        var returnValue: T? = nil
+    public static func fromNSDictionary(nsDictionary: NSDictionary) -> selfType? {
+        var returnValue: selfType? = nil
         if let dic = nsDictionary as? Dictionary<String, Any> {
-            returnValue = T.fromDictionary(dictionary: dic, object: object)
+            returnValue = selfType.fromDictionary(dictionary: dic) as? Self.selfType
         }
         return returnValue
     }
@@ -96,7 +98,7 @@ extension FlexibleModelProtocol {
         var returnValue: Dictionary<String, Any>? = nil
         if let data = self.toJson().data(using: .utf8) {
             do {
-                returnValue = try JSONSerialization.jsonObject(with:data, options: []) as? [String : Any]
+                returnValue = try JSONSerialization.jsonObject(with:data, options: []) as? [String: Any]
             }
             catch {
                 
@@ -117,7 +119,7 @@ extension FlexibleModelProtocol {
 
 extension FlexibleModelProtocol {
     public func toCopyOnWriteModel<T: CopyOnWriteModelProtocol>(object: inout T) -> T? {
-        var returnValue:T? = nil
+        var returnValue: T? = nil
         if let typeModel = self as? T.ModelType {
             object.dataWrapper = DataWrapper(originModel: typeModel)
             returnValue = object

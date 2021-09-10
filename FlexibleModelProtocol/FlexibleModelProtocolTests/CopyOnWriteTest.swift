@@ -12,7 +12,9 @@ import XCTest
 class CopyOnWriteTest: XCTestCase {
     
     struct TestModel: FlexibleModelProtocol {
-        var name: String = ""
+        typealias selfType = TestModel
+        
+        var name: String
     }
     
     struct CowModel: CopyOnWriteModelProtocol {
@@ -49,7 +51,7 @@ class CopyOnWriteTest: XCTestCase {
     }
     
     func testCoyOnWriteModelToFlexibleModel() {
-        let cowData:CowModel = CowModel(dataWrapper: DataWrapper(originModel: TestModel(name: "Any")))
+        let cowData: CowModel = CowModel(dataWrapper: DataWrapper(originModel: TestModel(name: "Any")))
         let flexibleModel: TestModel? = cowData.toFlexibleProtocolModel()
         XCTAssertNotNil(flexibleModel)
     }

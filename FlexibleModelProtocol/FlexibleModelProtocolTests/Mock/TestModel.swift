@@ -9,32 +9,42 @@ import Foundation
 
 
 struct MyModel: FlexibleModelProtocol {
-    var lostArticleBizInfo: MySubModel = MySubModel()
+    typealias selfType = MyModel
+    
+    let lostArticleBizInfo: MySubModel
 }
 struct MySubModel: FlexibleModelProtocol {
-    var list_total_count: String = ""
-    var result: MyResultModel = MyResultModel()
-    var row: Array<MyRowModel> = Array()
+    typealias selfType = MySubModel
+    
+    let list_total_count: String
+    let result: MyResultModel
+    let row: Array<MyRowModel>
 }
 
 struct MyResultModel: FlexibleModelProtocol {
-    var code: String = ""
-    var message: String = ""
+    typealias selfType = MyResultModel
+    
+    let code: String
+    let message: String
 }
 
 struct MyRowModel: FlexibleModelProtocol {
-    var idx: String = ""
-    var code: String = ""
-    var location: String = ""
-    var company: String = ""
+    typealias selfType = MyRowModel
+    
+    let idx: String
+    let code: String
+    let location: String
+    let company: String
 }
 
 
 struct MyRowModel2: FlexibleModelProtocol {
-    var idx: String
-    var code: String
-    var location: String
-    var company: String
+    typealias selfType = MyRowModel2
+    
+    let idx: String
+    let code: String
+    let location: String
+    let company: String
     
     init(location: String, company: String) {
         self.idx = ""

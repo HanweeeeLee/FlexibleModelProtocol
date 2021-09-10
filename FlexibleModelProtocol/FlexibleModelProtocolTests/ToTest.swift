@@ -23,19 +23,14 @@ class ToTest: XCTestCase {
     }
     
     func makeMockModel() -> MyModel {
-        var myModel: MyModel = MyModel()
-        var mySubModel: MySubModel = MySubModel()
         let myRowModel1: MyRowModel = MyRowModel(idx: "3832", code: "a1", location: "London", company: "kangol")
         let myRowModel2: MyRowModel = MyRowModel(idx: "1138", code: "b6", location: "Seoul", company: "LG")
-        mySubModel.row.append(myRowModel1)
-        mySubModel.row.append(myRowModel2)
         let myResultModel: MyResultModel = MyResultModel(code: "200", message: "Success")
-        mySubModel.result = myResultModel
-        mySubModel.list_total_count = "101"
-        myModel.lostArticleBizInfo = mySubModel
+        let mySubModel: MySubModel = MySubModel(list_total_count: "101", result: myResultModel, row: [myRowModel1, myRowModel2])
+        let myModel: MyModel = MyModel(lostArticleBizInfo: mySubModel)
         return myModel
     }
-    
+
     func testToJson() {
         XCTAssertNotNil(self.mockModel)
         guard let mock = self.mockModel else {
@@ -45,7 +40,7 @@ class ToTest: XCTestCase {
         XCTAssertNotEqual(jsonString, "")
         print("jsonString:\(jsonString)")
     }
-    
+
     func testToXml() {
         XCTAssertNotNil(self.mockModel)
         guard let mock = self.mockModel else {
@@ -57,7 +52,7 @@ class ToTest: XCTestCase {
         XCTAssertNotEqual(xmlString, "")
         print("xmlString:\(String(describing: xmlString))" )
     }
-    
+
     func testToDictionary() {
         XCTAssertNotNil(self.mockModel)
         guard let mock = self.mockModel else {
@@ -69,7 +64,7 @@ class ToTest: XCTestCase {
         XCTAssertGreaterThan(dic?.count ?? -1, 0)
         print("dictionary:\(String(describing: dic))" )
     }
-    
+
     func testToNSDictionary() {
         XCTAssertNotNil(self.mockModel)
         guard let mock = self.mockModel else {

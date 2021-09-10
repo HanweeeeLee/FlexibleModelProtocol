@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "FlexibleModelProtocol"
-  spec.version      = "1.1.5"
+  spec.version      = "1.1.6"
   spec.license      = 'MIT'
   spec.summary      = "Model protocol with flexible, diverse types of conversion"
   spec.homepage     = "https://github.com/HanweeeeLee/FlexibleModelProtocol"
