@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.summary      = "Model protocol with flexible, diverse types of conversion"
   spec.homepage     = "https://github.com/HanweeeeLee/FlexibleModelProtocol"
   spec.author             = { "hanwe lee" => "mobiledev@kakao.com" }
-  spec.source       = { :git => "https://github.com/HanweeeeLee/FlexibleModelProtocol.git", :tag => "1.1.5" }
+  spec.source       = { :git => "https://github.com/HanweeeeLee/FlexibleModelProtocol.git", :tag => "1.1.6" }
 
   spec.platform = :ios, "11.0"
   spec.osx.deployment_target = '10.13'
